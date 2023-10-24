@@ -11,3 +11,24 @@ building a geospatial monitoring system for an industrial site
 4. [Django project doc](https://docs.djangoproject.com/en/4.2/topics/db/queries/)
 5. [leaflet](https://leafletjs.com/)
 6. [Leaflet heat](https://github.com/Leaflet/Leaflet.heat)
+
+
+# Live Demo
+> you can vist the demo here : http://188.166.212.37
+
+
+# Setup local
+
++ clone the project
+```
+git clone https://github.com/raed-alsinani/Real_Time_Heatmaps.git 
+```
+
++ create Super User 
+```
+python manage.py createsuperuser
+```
++ run the app 
+```
+docker-compose up -d 
+```
