@@ -10,7 +10,7 @@ services:
       - '6379:6379'
 #    command: redis-server --loglevel warning --protected-mode no
     volumes:
-      - cache:/data
+      - ./cache:/data
   real-time-heatmap:
     build: .
     container_name: real-time-heatmap
@@ -28,7 +28,7 @@ services:
   db:
     image: postgres:12
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./postgres_data:/var/lib/postgresql/data
     container_name: 'database'
     environment:
       POSTGRES_DB: heatmap

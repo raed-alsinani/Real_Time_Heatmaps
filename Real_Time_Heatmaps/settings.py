@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dashboard.apps.DashboardConfig',
+    'corsheaders',
     'bootstrap5',
 
 ]
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'Real_Time_Heatmaps.urls'
@@ -72,6 +74,9 @@ TEMPLATES = [
 ASGI_APPLICATION = 'Real_Time_Heatmaps.routing.application'
 WSGI_APPLICATION = 'Real_Time_Heatmaps.wsgi.application'
 
+CORS_ALLOWED_ORIGINS = [
+    "http://188.166.212.37",
+]
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -81,7 +86,7 @@ DATABASES = {
         'NAME': 'heatmap',
         'USER': 'heatmap',
         'PASSWORD': 'heatmap',
-        'HOST': '188.166.212.37',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
