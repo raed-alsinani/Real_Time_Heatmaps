@@ -11,7 +11,7 @@ _is_sensor_mock_start_counter = 0
 
 
 def add_new_record():
-    timer = random.uniform(5, 50)
+    timer = 2
     from dashboard.models import CurrentReading
     from dashboard.models import Location, Monitoring
 
