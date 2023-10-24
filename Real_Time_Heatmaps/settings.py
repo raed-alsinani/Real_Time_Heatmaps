@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-v)ejz4++g4oge-&yk7y&0%9nn&6*acyzn@-o)5%qw!gyd$=%gk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['188.166.212.37']
 
 # Application definition
 
@@ -74,9 +74,7 @@ TEMPLATES = [
 ASGI_APPLICATION = 'Real_Time_Heatmaps.routing.application'
 WSGI_APPLICATION = 'Real_Time_Heatmaps.wsgi.application'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://188.166.212.37",
-]
+CORS_ALLOWED_ORIGINS = ['http://*', 'https://*']
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
