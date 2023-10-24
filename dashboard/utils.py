@@ -21,7 +21,7 @@ def add_new_record():
             reading=reading,
             unit_code=unit
         )
-        sensor_right.save()
+        # sensor_right.save()
 
     location = Location.objects.all()
 
