@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="col mb-4">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="row pt-2 px-2">
+                    <div class="col-auto">
+                        <div class="input-group mb-3">
+
+
+                            <span class="input-group-text" id="inputGroup-sizing-default">Sensors</span>
+                            <select class="form-select " aria-label="sensors" name="sensors" id="selected_sensor">
+                                <option value="percentage" selected>Percentage</option>
+                                <option value="tmp">Temperature</option>
+                                <option value="pressure">Pressure</option>
+                                <option value="steam_inj">Steam injection</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+        <div class="row gx-5">
+            <div class="col-md-3">
+                <div class="row">
+
+
+                    <div class="row">
+                      <table class="table table-bordered">
+  <thead>
+    <tr id="table-header">
+      <th scope="col">#</th>
+      <th scope="col">Type</th>
+      <th scope="col">Value</th>
+
+    </tr>
+  </thead>
+  <tbody id="table-row">
+    <tr>
+      <th scope="row">1</th>
+      <td>latitude</td>
+      <td id="latitude"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>longitude</td>
+      <td id="longitude"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>totalSensorsInSite</td>
+      <td id="totalSensorsInSite"></td>
+    </tr>
+      <tr>
+      <th scope="row">2</th>
+      <td>defaultZoom</td>
+      <td id="defaultZoom"></td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </div>
+            <div class="col-md-9 ">
+                <div class="row" id="monitorMap">
+                   <div id="map"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <script src="{% static 'js/dashboard_handler.js' %}" defer></script>
+{% endblock %}

@@ -1,0 +1,16 @@
+body {
+    background-color: aliceblue;
+}
+nav {
+    margin-bottom: 20px;
+
+}
+
+#map {
+    width: 100%;
+}
+
+#monitorMap {
+    height: 30vw;
+
+}
