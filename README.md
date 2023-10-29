@@ -13,8 +13,9 @@ building a geospatial monitoring system for an industrial site
 6. [Leaflet heat](https://github.com/Leaflet/Leaflet.heat)
 
 
-# Live Demo
-> you can vist the demo here : http://188.166.212.37
+[//]: # (# Live Demo)
+
+[//]: # (> you can vist the demo here : http://188.166.212.37)
 
 
 # Setup local
